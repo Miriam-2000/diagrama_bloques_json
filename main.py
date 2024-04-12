@@ -8,6 +8,19 @@ class DiagramNode:
         self.schemaId = schemaId
         self.connectedTo = connectedTo
 
+def cargar_datos(data):
+    nodos = []
+
+    for item in data:
+        nodo = DiagramNode(
+            item[id], 
+            item['schemaId'],
+            item.get['connectedTo'], input = [], output = []
+        )
+    nodos.append(nodo)
+
+    return nodos
+
 
 with open("example_backend.json", "r") as file:
     data = json.load(file)
