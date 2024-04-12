@@ -1,6 +1,7 @@
 import json
 
-with open('/home/miriam/diagrama_bloques_json/example_backend.json') as file:
+
+with open("/home/miguel/diagrama_bloques_json/example_backend.json", "r") as file:
     data = json.load(file)
 
 datos = []
