@@ -13,25 +13,21 @@ def cargar_datos(data):
 
     for item in data:
         nodo = DiagramNode(
-            item[id], 
+            item['id'], 
             item['schemaId'],
-            item.get['connectedTo'], input = [], output = []
+            item.get('connectedTo', {'input': [], 'output': []})
         )
     nodos.append(nodo)
-
+    print(nodos)
     return nodos
+
+
+
 
 
 with open("example_backend.json", "r") as file:
     data = json.load(file)
 
-datos = []
-for item in data:
-    dato = {
-        "id": item['id'],
-        "schemaId": item['schemaId'],
-        "connectedTo": item['connectedTo']
-    }
-    datos.append(dato)
 
-print(datos)
+
+cargar_datos(data)
