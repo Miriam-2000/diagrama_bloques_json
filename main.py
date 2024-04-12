@@ -30,8 +30,15 @@ def crear_diagrama(nodos):
                         nodes[nodo.id] >> nodes[conexion]
 
 
-with open("example_backend.json", "r") as file:
-    data = json.load(file)
 
-nodos = cargar_datos(data)
-crear_diagrama(nodos)
+
+def main():
+    ruta = "example_backend.json"
+    with open(ruta, "r") as file:
+        data = json.load(file)
+
+    nodos = cargar_datos(data)
+    crear_diagrama(nodos)
+
+if __name__ == "__main__":
+    main()
