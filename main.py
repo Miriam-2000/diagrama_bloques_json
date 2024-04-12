@@ -1,7 +1,15 @@
 import json
 
 
-with open("/home/miguel/diagrama_bloques_json/example_backend.json", "r") as file:
+class DiagramNode:
+
+    def __init__(self, id, schemaId, connectedTo):
+        self.id = id
+        self.schemaId = schemaId
+        self.connectedTo = connectedTo
+
+
+with open("example_backend.json", "r") as file:
     data = json.load(file)
 
 datos = []
